@@ -1,0 +1,6 @@
+framework module Pods_CalorieCountUITests {
+  umbrella header "Pods-CalorieCountUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

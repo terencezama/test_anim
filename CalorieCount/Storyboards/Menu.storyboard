@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gyj-kr-N5E">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meals Navigation Controller-->
+        <scene sceneID="nm0-5u-qDH">
+            <objects>
+                <navigationController id="zj8-Jz-J37" userLabel="Meals Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meals" image="home" id="Y72-75-2cJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PL3-WI-mOG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ict-7i-SKn" kind="relationship" relationship="rootViewController" id="MFj-66-dKP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9u-st-gOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-546"/>
+        </scene>
+        <!--Meals ViewController-->
+        <scene sceneID="eb7-ed-DHl">
+            <objects>
+                <viewController title="Meals" id="ict-7i-SKn" userLabel="Meals ViewController" customClass="MealsViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N8d-0W-ydA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-Ly-deH" userLabel="Meals Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.94750076530000005" green="0.22404208780000001" blue="0.18977254630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="1hj-lY-2Mf">
+                                    <rect key="frame" x="0.0" y="143" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" rowHeight="115" id="9fq-ld-t7J" customClass="MealCell" customModule="CalorieCount" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9fq-ld-t7J" id="RjO-rP-Mpe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-jg-1rN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="261" height="114.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBd-W4-Sef" userLabel="text">
+                                                            <rect key="frame" x="8" y="8" width="245" height="54"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYP-aq-bvM" userLabel="time">
+                                                            <rect key="frame" x="206.5" y="85.5" width="46.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Jan 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyG-jR-Wkq" userLabel="date">
+                                                            <rect key="frame" x="102" y="85.5" width="96.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FyG-jR-Wkq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GBd-W4-Sef" secondAttribute="bottom" constant="8" id="2JQ-N5-Uys"/>
+                                                        <constraint firstItem="GBd-W4-Sef" firstAttribute="leading" secondItem="Dvi-jg-1rN" secondAttribute="leading" constant="8" id="7Di-in-nSp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GBd-W4-Sef" secondAttribute="trailing" constant="8" id="Dfe-oq-Q2b"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="114.5" id="Haf-cN-yLT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="nYP-aq-bvM" secondAttribute="trailing" constant="8" id="Jl3-YR-1TY"/>
+                                                        <constraint firstItem="GBd-W4-Sef" firstAttribute="top" secondItem="Dvi-jg-1rN" secondAttribute="top" constant="8" id="LhM-5f-Do1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FyG-jR-Wkq" secondAttribute="bottom" constant="8" id="QHi-ok-Nh0"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nYP-aq-bvM" secondAttribute="bottom" constant="8" id="cPO-Ux-0ov"/>
+                                                        <constraint firstItem="FyG-jR-Wkq" firstAttribute="top" relation="lessThanOrEqual" secondItem="GBd-W4-Sef" secondAttribute="bottom" constant="57" id="dlI-32-rdI"/>
+                                                        <constraint firstItem="nYP-aq-bvM" firstAttribute="leading" secondItem="FyG-jR-Wkq" secondAttribute="trailing" constant="8" id="iog-UB-fbM"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hs-Xu-gfr">
+                                                    <rect key="frame" x="261" y="0.0" width="114" height="114"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TUS-UE-fMH" userLabel="calorie">
+                                                            <rect key="frame" x="8" y="38" width="98" height="38.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgB-WM-Btd">
+                                                            <rect key="frame" x="40.5" y="76.5" width="33" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="TUS-UE-fMH" firstAttribute="centerY" secondItem="4Hs-Xu-gfr" secondAttribute="centerY" id="Eec-U4-FGp"/>
+                                                        <constraint firstItem="TUS-UE-fMH" firstAttribute="leading" secondItem="4Hs-Xu-gfr" secondAttribute="leading" constant="8" id="T69-kK-uzg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TUS-UE-fMH" secondAttribute="trailing" constant="8" id="THt-yU-Pj0"/>
+                                                        <constraint firstItem="JgB-WM-Btd" firstAttribute="top" secondItem="TUS-UE-fMH" secondAttribute="bottom" id="Vw2-jy-0UW"/>
+                                                        <constraint firstAttribute="width" constant="114" id="jtU-Ag-SPJ"/>
+                                                        <constraint firstItem="JgB-WM-Btd" firstAttribute="centerX" secondItem="4Hs-Xu-gfr" secondAttribute="centerX" id="k0d-4f-z0U"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Dvi-jg-1rN" secondAttribute="bottom" id="HV5-S9-2Vv"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Hs-Xu-gfr" secondAttribute="bottom" constant="0.5" id="JzL-kp-Ap9"/>
+                                                <constraint firstAttribute="trailing" secondItem="4Hs-Xu-gfr" secondAttribute="trailing" id="KZi-qB-Fqe"/>
+                                                <constraint firstItem="4Hs-Xu-gfr" firstAttribute="top" secondItem="RjO-rP-Mpe" secondAttribute="top" id="TqK-sD-GS5"/>
+                                                <constraint firstItem="Dvi-jg-1rN" firstAttribute="top" secondItem="RjO-rP-Mpe" secondAttribute="top" id="fL2-lH-tzD"/>
+                                                <constraint firstItem="Dvi-jg-1rN" firstAttribute="leading" secondItem="RjO-rP-Mpe" secondAttribute="leading" id="l6P-Vn-t2C"/>
+                                                <constraint firstItem="4Hs-Xu-gfr" firstAttribute="leading" secondItem="Dvi-jg-1rN" secondAttribute="trailing" id="q04-B5-uKs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="RjO-rP-Mpe" id="qSu-Aw-gO0"/>
+                                            <outlet property="calorieLabel" destination="TUS-UE-fMH" id="14d-gV-gtt"/>
+                                            <outlet property="dateLabel" destination="FyG-jR-Wkq" id="cFr-kH-MiQ"/>
+                                            <outlet property="timeLabel" destination="nYP-aq-bvM" id="rnd-tV-hrw"/>
+                                            <outlet property="titleLabel" destination="GBd-W4-Sef" id="pX7-KF-bJo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ict-7i-SKn" id="Nzn-gk-6kt"/>
+                                    <outlet property="delegate" destination="ict-7i-SKn" id="yQJ-UG-hda"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVF-Zm-pFb" userLabel="Filter Button" customClass="CircularButton" customModule="CalorieCount" customModuleProvider="target">
+                                <rect key="frame" x="313" y="512" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="image" value="filter"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="ict-7i-SKn" eventType="touchUpInside" id="Te3-jm-arN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.30060696599999998" green="0.85195982459999997" blue="0.39056411390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e3a-Ly-deH" firstAttribute="top" secondItem="N8d-0W-ydA" secondAttribute="top" id="4pX-XW-gIK"/>
+                            <constraint firstItem="e3a-Ly-deH" firstAttribute="leading" secondItem="ZYM-YU-Rwc" secondAttribute="leading" id="O34-yL-5CB"/>
+                            <constraint firstItem="e3a-Ly-deH" firstAttribute="trailing" secondItem="ZYM-YU-Rwc" secondAttribute="trailing" id="QGl-Eq-NCc"/>
+                            <constraint firstItem="ZYM-YU-Rwc" firstAttribute="bottom" secondItem="CVF-Zm-pFb" secondAttribute="bottom" constant="32" id="Z5C-vL-R5T"/>
+                            <constraint firstAttribute="bottom" secondItem="e3a-Ly-deH" secondAttribute="bottom" id="wOg-Mj-8CE"/>
+                            <constraint firstItem="ZYM-YU-Rwc" firstAttribute="trailing" secondItem="CVF-Zm-pFb" secondAttribute="trailing" constant="32" id="wTX-CF-BQ6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZYM-YU-Rwc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meals" id="1DC-Pg-wUw">
+                        <barButtonItem key="leftBarButtonItem" title="Select" id="o7K-sI-D1B">
+                            <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="editButtonTapped:" destination="ict-7i-SKn" id="7JL-0D-08P"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="AUN-lp-3WZ">
+                                <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="ict-7i-SKn" id="jgH-5J-eJp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="g6M-XD-Amn">
+                                <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F4f-Y2-4Ip">
+                                    <rect key="frame" x="239.5" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="Clear Filter">
+                                        <color key="titleColor" red="0.94750076530000005" green="0.22404208780000001" blue="0.18977254630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clearFilterButtonTapped:" destination="ict-7i-SKn" eventType="touchUpInside" id="9z6-fW-nZg"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clearFilterButton" destination="F4f-Y2-4Ip" id="dRb-rp-Dwm"/>
+                        <outlet property="filterButton" destination="CVF-Zm-pFb" id="LOl-ys-haQ"/>
+                        <outlet property="tableView" destination="e3a-Ly-deH" id="YCQ-sc-jc7"/>
+                        <segue destination="AQF-M8-rL4" kind="presentation" identifier="addMealSegue" animates="NO" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="7Ge-XR-zOf"/>
+                        <segue destination="FCB-bl-e3P" kind="presentation" identifier="filterMealSegue" animates="NO" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="d2S-HJ-KDc"/>
+                        <segue destination="AQF-M8-rL4" kind="presentation" identifier="updateMealSegue" animates="NO" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Sg6-So-GxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHu-8S-6jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="zyc-Af-HXP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="Of8-J4-BEG"/>
+                    </items>
+                </navigationBar>
+            </objects>
+            <point key="canvasLocation" x="1161" y="-546"/>
+        </scene>
+        <!--Users ViewController-->
+        <scene sceneID="MiS-vV-O7I">
+            <objects>
+                <viewController title="Users" id="Mh4-qI-anM" userLabel="Users ViewController" customClass="UsersViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJb-7M-KsU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sf0-zw-Ytr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search user" id="Sno-f4-dLQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ufU-nU-pXS">
+                                    <rect key="frame" x="0.0" y="554" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="75" id="OS0-rT-kvv" userLabel="User Cell" customClass="UserCell" customModule="CalorieCount" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OS0-rT-kvv" id="Hs2-g4-aVz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRi-Hz-Tud" userLabel="Contact View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="74.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDA-9a-ouF" customClass="CircularView" customModule="CalorieCount" customModuleProvider="target">
+                                                            <rect key="frame" x="12.5" y="12.5" width="50" height="50"/>
+                                                            <color key="backgroundColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="CLd-g2-HHe"/>
+                                                                <constraint firstAttribute="width" constant="50" id="FsC-Lc-m28"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-bl-V3y">
+                                                            <rect key="frame" x="22" y="23" width="31.5" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="OsA-bl-V3y" firstAttribute="centerY" secondItem="SDA-9a-ouF" secondAttribute="centerY" id="Nyy-kA-jdM"/>
+                                                        <constraint firstItem="OsA-bl-V3y" firstAttribute="centerX" secondItem="SDA-9a-ouF" secondAttribute="centerX" id="e8c-0o-aSk"/>
+                                                        <constraint firstItem="SDA-9a-ouF" firstAttribute="centerY" secondItem="GRi-Hz-Tud" secondAttribute="centerY" id="jBd-jc-WvI"/>
+                                                        <constraint firstAttribute="width" constant="75" id="zTf-71-KmR"/>
+                                                        <constraint firstItem="SDA-9a-ouF" firstAttribute="centerX" secondItem="GRi-Hz-Tud" secondAttribute="centerX" id="zb9-as-TFQ"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpc-7w-7ii" userLabel="Display Name Label">
+                                                    <rect key="frame" x="83" y="12.5" width="284" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZm-2s-SAN" userLabel="Email Label">
+                                                    <rect key="frame" x="83" y="41.5" width="227" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Admin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqE-mo-SLJ" userLabel="Role label" customClass="BadgeLabel" customModule="CalorieCount" customModuleProvider="target">
+                                                    <rect key="frame" x="310" y="40.5" width="49" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                                            <color key="value" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="insets">
+                                                            <size key="value" width="4" height="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wqE-mo-SLJ" secondAttribute="trailing" constant="16" id="Fxl-w5-5wd"/>
+                                                <constraint firstItem="GRi-Hz-Tud" firstAttribute="leading" secondItem="Hs2-g4-aVz" secondAttribute="leading" id="HX5-rH-fdJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mpc-7w-7ii" secondAttribute="trailing" constant="8" id="RXa-Qy-xvX"/>
+                                                <constraint firstItem="Mpc-7w-7ii" firstAttribute="leading" secondItem="GRi-Hz-Tud" secondAttribute="trailing" constant="8" id="Ups-vh-vMF"/>
+                                                <constraint firstItem="wqE-mo-SLJ" firstAttribute="leading" secondItem="QZm-2s-SAN" secondAttribute="trailing" id="ZMb-lt-Bct"/>
+                                                <constraint firstItem="GRi-Hz-Tud" firstAttribute="top" secondItem="Hs2-g4-aVz" secondAttribute="top" id="ZOM-jg-eUg"/>
+                                                <constraint firstItem="QZm-2s-SAN" firstAttribute="leading" secondItem="GRi-Hz-Tud" secondAttribute="trailing" constant="8" id="ZWT-t3-yh9"/>
+                                                <constraint firstAttribute="bottom" secondItem="wqE-mo-SLJ" secondAttribute="bottom" constant="16" id="cCM-pk-AgY"/>
+                                                <constraint firstAttribute="bottom" secondItem="GRi-Hz-Tud" secondAttribute="bottom" id="lKg-oY-48s"/>
+                                                <constraint firstItem="QZm-2s-SAN" firstAttribute="top" secondItem="Mpc-7w-7ii" secondAttribute="bottom" constant="8" id="r7j-Vs-J4J"/>
+                                                <constraint firstItem="Mpc-7w-7ii" firstAttribute="top" secondItem="SDA-9a-ouF" secondAttribute="top" id="se1-x6-qzE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="badgeLabel" destination="wqE-mo-SLJ" id="Gxs-dG-Xwq"/>
+                                            <outlet property="displayNameLabel" destination="Mpc-7w-7ii" id="pIY-HE-dvY"/>
+                                            <outlet property="emailLabel" destination="QZm-2s-SAN" id="RTO-9y-g6A"/>
+                                            <outlet property="initialsLabel" destination="OsA-bl-V3y" id="WXw-SM-wcj"/>
+                                            <outlet property="userCircularView" destination="SDA-9a-ouF" id="vPM-zJ-eQR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mh4-qI-anM" id="ckk-rR-KeK"/>
+                                    <outlet property="delegate" destination="Mh4-qI-anM" id="YgR-a0-pks"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.30060696599999998" green="0.85195982459999997" blue="0.39056411390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sf0-zw-Ytr" secondAttribute="bottom" id="Fne-q7-bJP"/>
+                            <constraint firstItem="sf0-zw-Ytr" firstAttribute="trailing" secondItem="HXM-ms-iD9" secondAttribute="trailing" id="far-ju-woM"/>
+                            <constraint firstItem="sf0-zw-Ytr" firstAttribute="leading" secondItem="HXM-ms-iD9" secondAttribute="leading" id="nSN-Nv-2HC"/>
+                            <constraint firstItem="sf0-zw-Ytr" firstAttribute="top" secondItem="uJb-7M-KsU" secondAttribute="top" id="ur0-d5-JKe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HXM-ms-iD9"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Users" id="vRG-X9-9VZ">
+                        <barButtonItem key="leftBarButtonItem" title="Select" id="v2Z-fr-5jQ">
+                            <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="editButtonTapped:" destination="Mh4-qI-anM" id="4Wi-r6-DY9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d2o-V4-Fmz">
+                            <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="Mh4-qI-anM" id="pys-Js-tYd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Sno-f4-dLQ" id="ADD-oH-eat"/>
+                        <outlet property="tableView" destination="sf0-zw-Ytr" id="hoo-Xd-2MW"/>
+                        <segue destination="0Xq-y3-2rU" kind="presentation" identifier="addUserSegue" animates="NO" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Ris-I2-9tc"/>
+                        <segue destination="0Xq-y3-2rU" kind="presentation" identifier="updateUserSegue" animates="NO" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="KWf-Dv-oqY"/>
+                        <segue destination="ict-7i-SKn" kind="show" identifier="showMealsSegue" id="ezP-Ei-p0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UE6-bO-NFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8" y="747.9760119940031"/>
+        </scene>
+        <!--Menu Tab Bar View Controller-->
+        <scene sceneID="zXP-03-0jA">
+            <objects>
+                <tabBarController id="Gyj-kr-N5E" customClass="MenuTabBarViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xCg-qG-5Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.30196078431372547" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zj8-Jz-J37" kind="relationship" relationship="viewControllers" id="nMq-Si-5ra"/>
+                        <segue destination="F4D-fb-lla" kind="relationship" relationship="viewControllers" id="Shq-Xi-nEK"/>
+                        <segue destination="wxf-Ym-9SX" kind="relationship" relationship="viewControllers" id="dTR-pi-qsN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktf-an-Pz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="748"/>
+        </scene>
+        <!--Settings ViewController-->
+        <scene sceneID="jVi-QE-l9o">
+            <objects>
+                <viewController title="Settings" id="o1h-L4-oVs" userLabel="Settings ViewController" customClass="SettingsViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hai-eX-nPm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Daily Calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3x-yc-JCY" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                <rect key="frame" x="16" y="80" width="343" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="caloriesTextFieldEditingChanged:" destination="o1h-L4-oVs" eventType="editingChanged" id="W0n-E2-MYK"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nh-ER-GIw" customClass="Button" customModule="CalorieCount" customModuleProvider="target">
+                                <rect key="frame" x="16" y="105" width="343" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="outlined" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="o1h-L4-oVs" eventType="touchUpInside" id="df5-AX-k7x"/>
+                                    <segue destination="iWf-KI-1R1" kind="unwind" unwindAction="unwindToLoginVcWithSegue:" id="vWt-oV-d2M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Nh-ER-GIw" firstAttribute="leading" secondItem="dDb-Bi-iT3" secondAttribute="leading" constant="16" id="CPZ-bM-UcE"/>
+                            <constraint firstItem="dDb-Bi-iT3" firstAttribute="trailing" secondItem="X3x-yc-JCY" secondAttribute="trailing" constant="16" id="EOK-NG-AhB"/>
+                            <constraint firstItem="dDb-Bi-iT3" firstAttribute="trailing" secondItem="6Nh-ER-GIw" secondAttribute="trailing" constant="16" id="KHk-pU-Oqu"/>
+                            <constraint firstItem="X3x-yc-JCY" firstAttribute="leading" secondItem="dDb-Bi-iT3" secondAttribute="leading" constant="16" id="aXs-br-yis"/>
+                            <constraint firstItem="X3x-yc-JCY" firstAttribute="top" secondItem="dDb-Bi-iT3" secondAttribute="top" constant="16" id="deg-hg-fbi"/>
+                            <constraint firstItem="6Nh-ER-GIw" firstAttribute="top" secondItem="X3x-yc-JCY" secondAttribute="bottom" constant="8" id="fzC-Nf-Jpy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dDb-Bi-iT3"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3eb-lh-FuW" appends="YES" id="u3g-LZ-Fzf"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="ffZ-92-b3V"/>
+                    <connections>
+                        <outlet property="caloriesTextField" destination="X3x-yc-JCY" id="CJv-p3-Bmi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nx2-wU-zGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iWf-KI-1R1" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="3eb-lh-FuW">
+                    <connections>
+                        <action selector="viewDidTapped:" destination="o1h-L4-oVs" id="9Eb-n2-4aF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1160.8" y="1566.5667166416792"/>
+        </scene>
+        <!--Users NavigationController-->
+        <scene sceneID="3M5-4z-yXQ">
+            <objects>
+                <navigationController id="F4D-fb-lla" userLabel="Users NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Users" image="users" id="vMc-Vq-niZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4UG-lP-wbg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mh4-qI-anM" kind="relationship" relationship="rootViewController" id="Zuc-az-nY9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9N-OA-4Tw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="748"/>
+        </scene>
+        <!--Settings NavigationController-->
+        <scene sceneID="SRu-Gw-sUf">
+            <objects>
+                <navigationController id="wxf-Ym-9SX" userLabel="Settings NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="IqD-Uo-wj4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x3o-n8-aND">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="o1h-L4-oVs" kind="relationship" relationship="rootViewController" id="2E9-xs-uVR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHR-We-7UE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="1567"/>
+        </scene>
+        <!--Meals Edit View Controller-->
+        <scene sceneID="Poj-ir-eRV">
+            <objects>
+                <viewController id="AQF-M8-rL4" customClass="MealsEditViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnu-YF-R8G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u17-0v-u1k" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.70234910102739723" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1w-QW-Yi9" customClass="CardView" customModule="CalorieCount" customModuleProvider="target">
+                                <rect key="frame" x="8" y="95" width="359" height="275"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zSM-5n-qFm">
+                                        <rect key="frame" x="16" y="16" width="327" height="243"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-6T-6FN">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-8K-lmj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL3-ZJ-QDH">
+                                                        <rect key="frame" x="288" y="0.0" width="39" height="30"/>
+                                                        <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Close">
+                                                            <color key="titleColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <state key="selected" title="Dimiss"/>
+                                                        <connections>
+                                                            <action selector="closeButtonTapped:" destination="AQF-M8-rL4" eventType="touchUpInside" id="SOz-us-oi5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3he-DJ-oCf">
+                                                <rect key="frame" x="0.0" y="46" width="327" height="151"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrition:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7r-0u-2cO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hWC-w0-X4i">
+                                                        <rect key="frame" x="0.0" y="19" width="327" height="75"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="jG0-bI-fU2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-Nn-fDm" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="96" width="327" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qh8-mx-tFH" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="115" width="327" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-2d-qYD" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="134" width="327" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-Xf-66D" customClass="Button" customModule="CalorieCount" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="213" width="327" height="30"/>
+                                                <state key="normal" title="Create"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="outlined" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="AQF-M8-rL4" eventType="touchUpInside" id="HW8-6y-VT3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zSM-5n-qFm" firstAttribute="top" secondItem="P1w-QW-Yi9" secondAttribute="top" constant="16" id="9Oh-AK-cur"/>
+                                    <constraint firstAttribute="bottom" secondItem="zSM-5n-qFm" secondAttribute="bottom" constant="16" id="BxJ-QP-Qg6"/>
+                                    <constraint firstAttribute="trailing" secondItem="zSM-5n-qFm" secondAttribute="trailing" constant="16" id="OIW-bF-HKs"/>
+                                    <constraint firstItem="zSM-5n-qFm" firstAttribute="leading" secondItem="P1w-QW-Yi9" secondAttribute="leading" constant="16" id="iiq-0b-s75"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="u17-0v-u1k" firstAttribute="leading" secondItem="R9m-M9-QJ3" secondAttribute="leading" id="7ah-aA-nmA"/>
+                            <constraint firstItem="R9m-M9-QJ3" firstAttribute="trailing" secondItem="P1w-QW-Yi9" secondAttribute="trailing" constant="8" id="G3j-Xc-biE" userLabel="Card View Right"/>
+                            <constraint firstItem="u17-0v-u1k" firstAttribute="bottom" secondItem="R9m-M9-QJ3" secondAttribute="bottom" id="IF0-9J-09e"/>
+                            <constraint firstItem="u17-0v-u1k" firstAttribute="top" secondItem="cnu-YF-R8G" secondAttribute="top" id="Lo8-hK-axI"/>
+                            <constraint firstItem="P1w-QW-Yi9" firstAttribute="leading" secondItem="R9m-M9-QJ3" secondAttribute="leading" constant="8" id="jef-Ro-tTq" userLabel="Card View Left"/>
+                            <constraint firstItem="u17-0v-u1k" firstAttribute="trailing" secondItem="R9m-M9-QJ3" secondAttribute="trailing" id="mFl-uX-pFQ"/>
+                            <constraint firstItem="P1w-QW-Yi9" firstAttribute="top" secondItem="R9m-M9-QJ3" secondAttribute="top" constant="75" id="y9e-ad-Sma" userLabel="Card View Top"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R9m-M9-QJ3"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="u17-0v-u1k" id="z5J-DZ-d7B"/>
+                        <outlet property="calorieTextField" destination="6aV-2d-qYD" id="0XK-J1-mWZ"/>
+                        <outlet property="cardConstraints" destination="QNo-hu-U5J" id="gvi-AI-C33"/>
+                        <outlet property="cardView" destination="P1w-QW-Yi9" id="bBN-x1-PvN"/>
+                        <outlet property="closeButton" destination="cL3-ZJ-QDH" id="RdX-vo-4OI"/>
+                        <outlet property="dateTextField" destination="RCM-Nn-fDm" id="MDE-RR-swV"/>
+                        <outlet property="descTextView" destination="hWC-w0-X4i" id="uld-iG-kDz"/>
+                        <outlet property="submitButton" destination="CvU-Xf-66D" id="Odh-d6-P9Y"/>
+                        <outlet property="timeTextField" destination="qh8-mx-tFH" id="wNh-1Y-EME"/>
+                        <outlet property="titleLabel" destination="qHE-8K-lmj" id="bNm-4N-UOr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8R-Mi-Z6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="QNo-hu-U5J" customClass="Constraints" customModule="CalorieCount" customModuleProvider="target">
+                    <connections>
+                        <outlet property="left" destination="jef-Ro-tTq" id="ZuG-w3-z7y"/>
+                        <outlet property="right" destination="G3j-Xc-biE" id="GXs-Oh-kvg"/>
+                        <outlet property="top" destination="y9e-ad-Sma" id="NDN-vn-Bvt"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="2145" y="-820"/>
+        </scene>
+        <!--Meals Filter View Controller-->
+        <scene sceneID="Hps-hJ-7sN">
+            <objects>
+                <viewController id="FCB-bl-e3P" customClass="MealsFilterViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpG-ba-vRL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WH5-l4-64S" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.70234910100000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSo-66-M1h" customClass="CardView" customModule="CalorieCount" customModuleProvider="target">
+                                <rect key="frame" x="8" y="95" width="359" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="f3g-SE-X5x">
+                                        <rect key="frame" x="16" y="16" width="327" height="128"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-7m-E2Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Meals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xte-oR-vvG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-gh-nht">
+                                                        <rect key="frame" x="288" y="0.0" width="39" height="30"/>
+                                                        <color key="tintColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Close">
+                                                            <color key="titleColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <state key="selected" title="Dismiss"/>
+                                                        <connections>
+                                                            <action selector="closeButtonTapped:" destination="FCB-bl-e3P" eventType="touchUpInside" id="APf-iu-GTs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-tJ-aEs">
+                                                <rect key="frame" x="0.0" y="46" width="327" height="36"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sr6-Gf-kUG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="36"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="From Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyk-4d-HLL" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="17"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="email"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="From Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giX-4O-Yqd" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="19" width="163.5" height="17"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="password"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8dS-io-jdz">
+                                                        <rect key="frame" x="163.5" y="0.0" width="163.5" height="36"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="To Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Og3-IY-aDh" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="17"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="email"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="To Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J07-aR-O7B" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="19" width="163.5" height="17"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="password"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ4-7Y-KnI" customClass="Button" customModule="CalorieCount" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="98" width="327" height="30"/>
+                                                <state key="normal" title="Filter"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="outlined" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="filterButtonTapped:" destination="FCB-bl-e3P" eventType="touchUpInside" id="dwQ-ih-yd6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="f3g-SE-X5x" secondAttribute="trailing" constant="16" id="0Il-KT-XuX"/>
+                                    <constraint firstItem="f3g-SE-X5x" firstAttribute="leading" secondItem="nSo-66-M1h" secondAttribute="leading" constant="16" id="Dbr-gq-AAD"/>
+                                    <constraint firstItem="f3g-SE-X5x" firstAttribute="top" secondItem="nSo-66-M1h" secondAttribute="top" constant="16" id="ekw-TZ-LZB"/>
+                                    <constraint firstAttribute="bottom" secondItem="f3g-SE-X5x" secondAttribute="bottom" constant="16" id="gE8-Y5-5ga"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WH5-l4-64S" firstAttribute="top" secondItem="WpG-ba-vRL" secondAttribute="top" id="TFK-Sa-bRC"/>
+                            <constraint firstItem="WH5-l4-64S" firstAttribute="leading" secondItem="kO7-7L-yvx" secondAttribute="leading" id="VZw-Gu-nrR"/>
+                            <constraint firstItem="nSo-66-M1h" firstAttribute="top" secondItem="kO7-7L-yvx" secondAttribute="top" constant="75" id="XxL-c8-PKy" userLabel="Card View Top"/>
+                            <constraint firstItem="nSo-66-M1h" firstAttribute="leading" secondItem="kO7-7L-yvx" secondAttribute="leading" constant="8" id="dTu-Af-Mde" userLabel="Card View Left"/>
+                            <constraint firstItem="WH5-l4-64S" firstAttribute="bottom" secondItem="kO7-7L-yvx" secondAttribute="bottom" id="hHJ-v1-eYm"/>
+                            <constraint firstItem="WH5-l4-64S" firstAttribute="trailing" secondItem="kO7-7L-yvx" secondAttribute="trailing" id="ko7-Zt-cvQ"/>
+                            <constraint firstItem="kO7-7L-yvx" firstAttribute="trailing" secondItem="nSo-66-M1h" secondAttribute="trailing" constant="8" id="wsc-BL-mWe" userLabel="Card View Right"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kO7-7L-yvx"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="WH5-l4-64S" id="2dD-rT-EDm"/>
+                        <outlet property="cardConstraints" destination="b9j-0g-m2a" id="lXt-eC-pii"/>
+                        <outlet property="cardView" destination="nSo-66-M1h" id="XHj-mJ-OeN"/>
+                        <outlet property="closeButton" destination="TJd-gh-nht" id="bem-KD-2JM"/>
+                        <outlet property="fromDateTextField" destination="uyk-4d-HLL" id="ChC-LO-0Bo"/>
+                        <outlet property="fromTimeTextField" destination="giX-4O-Yqd" id="tib-lF-7di"/>
+                        <outlet property="toDateTextField" destination="Og3-IY-aDh" id="ppf-Lv-cbP"/>
+                        <outlet property="toTimeTextField" destination="J07-aR-O7B" id="WeX-ux-142"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAM-wv-ErR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="b9j-0g-m2a" customClass="Constraints" customModule="CalorieCount" customModuleProvider="target">
+                    <connections>
+                        <outlet property="left" destination="dTu-Af-Mde" id="kHP-Fz-Rsj"/>
+                        <outlet property="right" destination="wsc-BL-mWe" id="4my-tP-DSI"/>
+                        <outlet property="top" destination="XxL-c8-PKy" id="yh7-sf-Wdm"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="2145" y="-117"/>
+        </scene>
+        <!--Users Edit View Controller-->
+        <scene sceneID="8FD-Xp-aIF">
+            <objects>
+                <viewController id="0Xq-y3-2rU" customClass="UsersEditViewController" customModule="CalorieCount" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5BE-Kk-rbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bp-GO-nRu" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.70234910100000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeL-uV-tDp" customClass="CardView" customModule="CalorieCount" customModuleProvider="target">
+                                <rect key="frame" x="10" y="252.5" width="359" height="182"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UON-8K-ruB">
+                                        <rect key="frame" x="8" y="8" width="343" height="166"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Re-4L-pzU">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-mb-UgG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfb-yb-5d6">
+                                                        <rect key="frame" x="304" y="0.0" width="39" height="30"/>
+                                                        <color key="tintColor" red="0.30060696599999998" green="0.85195982459999997" blue="0.39056411390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Close">
+                                                            <color key="titleColor" red="0.30196078430000001" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <state key="selected" title="Dismiss"/>
+                                                        <connections>
+                                                            <action selector="closeButtonTapped:" destination="0Xq-y3-2rU" eventType="touchUpInside" id="ZpK-LB-LMj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-je-TRf">
+                                                <rect key="frame" x="0.0" y="46" width="343" height="74"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DisplayName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-Zx-YFV" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="required"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbq-Lo-VgN" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="19" width="343" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-jv-56N" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="38" width="343" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-mJ-fNf" customClass="TextField" customModule="CalorieCount" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="57" width="343" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="ibValidatorType" value="password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-qM-Nl1" customClass="Button" customModule="CalorieCount" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="136" width="343" height="30"/>
+                                                <state key="normal" title="Create"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="outlined" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="0Xq-y3-2rU" eventType="touchUpInside" id="wkg-iZ-I0x"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UON-8K-ruB" firstAttribute="leading" secondItem="XeL-uV-tDp" secondAttribute="leading" constant="8" id="5Zb-NK-jCi"/>
+                                    <constraint firstAttribute="trailing" secondItem="UON-8K-ruB" secondAttribute="trailing" constant="8" id="MXu-5e-oHn"/>
+                                    <constraint firstAttribute="bottom" secondItem="UON-8K-ruB" secondAttribute="bottom" constant="8" id="UxK-dU-Rth"/>
+                                    <constraint firstItem="UON-8K-ruB" firstAttribute="top" secondItem="XeL-uV-tDp" secondAttribute="top" constant="8" id="wSa-HU-AgF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Bp-GO-nRu" firstAttribute="top" secondItem="5BE-Kk-rbc" secondAttribute="top" id="9DF-8A-cgM"/>
+                            <constraint firstItem="2Ft-Up-Yry" firstAttribute="trailing" secondItem="XeL-uV-tDp" secondAttribute="trailing" constant="6" id="dV3-vv-ahN" userLabel="Card View Right"/>
+                            <constraint firstItem="8Bp-GO-nRu" firstAttribute="trailing" secondItem="2Ft-Up-Yry" secondAttribute="trailing" id="gBB-KH-CBj"/>
+                            <constraint firstItem="8Bp-GO-nRu" firstAttribute="leading" secondItem="2Ft-Up-Yry" secondAttribute="leading" id="iq5-GB-c17"/>
+                            <constraint firstItem="8Bp-GO-nRu" firstAttribute="bottom" secondItem="2Ft-Up-Yry" secondAttribute="bottom" id="nyQ-ie-5wo"/>
+                            <constraint firstItem="XeL-uV-tDp" firstAttribute="leading" secondItem="2Ft-Up-Yry" secondAttribute="leading" constant="10" id="vye-1q-Kwm" userLabel="Card View Left"/>
+                            <constraint firstItem="XeL-uV-tDp" firstAttribute="top" secondItem="2Ft-Up-Yry" secondAttribute="top" constant="232.5" id="z37-TT-bcg" userLabel="Card View Top"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ft-Up-Yry"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="8Bp-GO-nRu" id="m67-mD-kNi"/>
+                        <outlet property="cardConstraints" destination="Neg-La-PTr" id="kyt-zc-URd"/>
+                        <outlet property="cardView" destination="XeL-uV-tDp" id="o2N-28-cpv"/>
+                        <outlet property="closeButton" destination="Cfb-yb-5d6" id="qZQ-AN-hG9"/>
+                        <outlet property="displayNameTextField" destination="0iY-Zx-YFV" id="KGV-kM-3bM"/>
+                        <outlet property="emailTextField" destination="Lbq-Lo-VgN" id="tqc-fR-Q7t"/>
+                        <outlet property="passwordTextField" destination="nVW-jv-56N" id="alP-f5-9C1"/>
+                        <outlet property="roleTextField" destination="8AR-mJ-fNf" id="CLR-yc-glS"/>
+                        <outlet property="submitButton" destination="WLi-qM-Nl1" id="DY4-en-qe3"/>
+                        <outlet property="titleLabel" destination="ObI-mb-UgG" id="gfK-lB-rvc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BvF-Cv-FEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Neg-La-PTr" customClass="Constraints" customModule="CalorieCount" customModuleProvider="target">
+                    <connections>
+                        <outlet property="left" destination="vye-1q-Kwm" id="oCM-WI-AVb"/>
+                        <outlet property="right" destination="dV3-vv-ahN" id="wKd-XE-heH"/>
+                        <outlet property="top" destination="z37-TT-bcg" id="WkA-n6-0Ut"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="2145" y="748"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="24" height="23"/>
+        <image name="settings" width="27" height="27"/>
+        <image name="users" width="28" height="19"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KWf-Dv-oqY"/>
+        <segue reference="Sg6-So-GxU"/>
+        <segue reference="ezP-Ei-p0w"/>
+    </inferredMetricsTieBreakers>
+</document>
